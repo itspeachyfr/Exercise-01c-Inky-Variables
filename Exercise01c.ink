@@ -107,6 +107,7 @@ Within you find a pair of sturdy looking boots.
 Do you take them with you? 
 + [ take the boots ] -> boot_pickup
 + [ leave the boots ] -> leave_boots
+
 -> END
 
 == boot_pickup ==
