@@ -4,8 +4,6 @@ Grade : Sophmore
 Exercise 1c variables : Baltos Cave
 \\
 
-
-
 VAR health = 5
 VAR pet_name = ""
 VAR boots = 0
@@ -47,6 +45,7 @@ You have {boots} boots.
 == east_tunnel ==
 { pet_name == "Charlie": Charlie would love it here in the east| }
 You are in the east tunnel. It is very dark, you can't see anything.
+
 
 * { torches > 0 } [Light Torch] -> east_tunnel_lit
 
@@ -98,7 +97,6 @@ Within you find a pair of sturdy looking boots.
 Do you take them with you? 
 + [ take the boots ] -> boot_pickup
 + [ leave the boots ] -> leave_boots
-
 -> END
 
 == boot_pickup ==
@@ -129,28 +127,28 @@ Suddenly, you hear it — the sound of heavy footsteps, and then the unmistakabl
  
 { boots == 1 :  Your feet pound against the cold stone as you run, the adrenaline surging through your veins. Every breath feels like a struggle, but you keep moving. }
     
-* { boots == 1 } [RUN!] -> balto_spirit
+* { boots == 1 } [RUN!] -> dog_spirit
 
    -> END
     
-    == balto_spirit ==
+    == dog_spirit ==
 
 A rustle in the shadows ahead catches your eye — something is moving fast. You turn, expecting another danger, but instead, a figure materializes in front of you.
 
-It's Balto. Your childhood dog.
+It's { pet_name }! Your childhood dog.
 
-But... how? Balto passed away years ago, and yet, there he is. His fur is glowing faintly with a celestial light, his eyes filled with wisdom and calm.
+But... how? { pet_name } passed away years ago, and yet, there he is. His fur is glowing faintly with a celestial light, his eyes filled with a gentle calmness and undeniable wisdom.
 
-BALTO
-<<Balto's voice is strong and reassuring, though his form flickers like a dream.>>
 
-_Balto barks once, loudly, his tail wagging in a way that feels so real. You can feel the rush of warmth from his presence, the bond between you as if he never left. He looks at you, as if telling you to trust him. The growl of the bear is just a moment behind, but you know you're not alone anymore.
+<< { pet_name }'s voice is strong and reassuring, though his form flickers like a dream.>>
 
-Without thinking, you follow Balto as he leads you forward with an unearthly speed, darting through the tunnel's twists and turns like a shadow. The bear's growls fade into the distance.
+{ pet_name } barks once, loudly, his tail wagging in a way that feels so real. You can feel the rush of warmth from his presence, the bond between you as if he never left. He looks at you, as if telling you to trust him. The growl of the bear is just a moment behind, but you know you're not alone anymore.
 
-Eventually, the tunnel opens up, and you can no longer hear the bear. Balto stops at the mouth of the tunnel, his form flickering once more.
+Without thinking, you follow { pet_name } as he leads you forward with an unearthly speed, darting through the tunnel's twists and turns like a shadow. The bear's growls fade into the distance.
 
-BALTO
+Eventually, the tunnel opens up, and you can no longer hear the bear. { pet_name } stops at the mouth of the tunnel, his form flickering once more.
+
+<< { pet_name } >>
  He looks at you one last time, his tail wagging gently. "You're safe now. But never forget — when the shadows grow long, and the beasts are close... remember, you're never truly alone."
 
 And with that, he vanishes into the light.
@@ -171,10 +169,10 @@ It snarls and roars, its claws raking across your body. The pain is overwhelming
 
 As your life begins to slip away, your last thoughts drift to something — or someone — you loved more than anything. The image of Balto, your childhood dog, appears in the darkness. His eyes, filled with warmth and loyalty, shine brighter than anything around you. You feel a sense of calm in his presence, even as the world fades away.
 
-BALTO
+{ pet_name }
 _He is there, in the light, standing by your side._ His fur glows softly, his tail wagging gently, just as it did when you were young. He nudges you with his snout, as if to say, _"It’s okay. You’re not alone."_
 
-And in that moment, as the pain fades completely, you feel his comforting presence, and the light grows around you. Balto is there, waiting for you. The tunnel, the bear, the fear—all of it is gone. You are at peace.
+And in that moment, as the pain fades completely, you feel his comforting presence, and the light grows around you. { pet_name } is there, waiting for you. The tunnel, the bear, the fear—all of it is gone. You are at peace.
 
 With one final, soft breath, you let go.
 
